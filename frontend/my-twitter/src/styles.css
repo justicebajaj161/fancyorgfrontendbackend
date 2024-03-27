@@ -1,0 +1,975 @@
+
+
+@media screen and (min-width:768px) {
+    *{
+        margin:0;
+        padding:0;   
+        box-sizing: border-box;
+    
+    }
+    body{
+        
+        --twitter-color:#50b7f5;
+        --twitter-background:#d5d6d7;
+    
+    }
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.7); /* Adjust the background color and opacity */
+        z-index: 9999; /* Adjust the z-index value to make sure the overlay appears above other elements */
+      }
+      
+    .usersearchdetails{
+        justify-content: center;
+        margin-top: 2rem;
+        
+    }
+    .usersearchdetails:hover{
+        background-color: var(--twitter-background);
+        color: var(--twitter-color);
+    }
+    .imgofuser{
+        width: 2rem;
+        height: 2rem;
+    }
+    .imgofuser-img{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        background-image: url("https://img.icons8.com/ios-filled/1x/user-female-circle.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border:2px solid black
+    }
+    .imgofuser-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .nameofuser{
+        margin-left: 4rem;
+        margin-top: 0.2rem;
+    }
+    .usernameoftheuser{
+        margin-left: 4rem;
+        margin-top: 0.2rem;
+    }
+    .sidebarsearchboxdiv{
+        position: relative;
+    }
+    .sidebarsearchBox {
+        width: 30rem;
+        padding-left: 50px;
+        border: none;
+        border-radius: 30px;
+      }
+      .sidebarsearchBox::placeholder{
+        text-indent: 50px;
+        color: black;
+      }
+      .sidebarsearchBox:focus {
+        
+        text-indent: 50px;
+      }
+      
+      .sidebarsearchIcon {
+        position: absolute;
+        top: 18px; /* Adjust as needed for vertical alignment */
+        left: 20px; /* Adjust as needed for horizontal alignment */
+        color: #333; /* Change color as needed */
+      }
+    .name-n-username-container h4{
+          font-size: 18px;
+          width: 8rem;
+          font-weight: bolder;
+    }
+   .fa-trash-can:hover{
+       color: red;
+       cursor: pointer;
+    }
+    
+    .single-feed:hover{
+        background-color: #c0e7ff;
+        cursor: pointer;
+    }
+    .fa-trash-can{
+        font-size: 1.3rem;
+        padding:0.5rem;
+    }
+    .wrap-it{
+        word-wrap: break-word;
+    }
+    
+    .single-feed{
+        transition: 0.3s ease-out;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        border: 1px solid var(--twitter-background);
+    }
+    
+    .upload-image-div{
+        padding-left:1rem;
+        
+    }
+    .upload-image-div i{
+        cursor:pointer; 
+    }
+    
+    .tweet-btn{
+        background: var(--twitter-color);
+        width: 8rem;
+    
+    }
+    .tweet-btn-2{
+        background: var(--twitter-color);
+    }
+    .delete-btn-1{
+        background: red;
+    }
+    .sidebarOption{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .sidebarOption .material-symbols-outlined, .fa-message{
+        padding: 20px;
+    }
+    .sidebarOption h2{
+     font-weight: 800;
+     font-size: 20px;
+     margin-right:20px;
+    }
+    .sidebarOption:hover{
+        background-color: var(--twitter-background);
+        border-radius: 30px;
+        color:var(--twitter-color) ;
+    }
+    .container-lg{
+        display:flex;
+        max-width: 960px;
+        height: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+        
+    }
+    .sidebar{
+        border-right: 1px solid var(--twitter-background);
+        flex:0.2;
+        min-width: 200px;
+        margin-top: 20px;
+        padding-left: 20px;
+        padding-right: 70px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    
+    
+    .last-sidebar-item{
+        margin-top:auto;
+        
+    }
+    .fa-message{
+        font-size: 30px;
+        color:var(--twitter-color);
+    }
+    .feed{
+        flex: 0.6;
+        border-right: 1px solid var(--twitter-background);
+        min-width: fit-content;
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        overflow-y: scroll;
+    }
+    
+    .single-tweet-text{
+        padding-left:3rem;
+        font-weight: 600;
+        width: 25rem;
+    }
+    
+    .single-tweet-img-container{
+        width:27rem;
+        height:20rem;
+        margin-left:3rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border:2px solid var(--twitter-color);
+    }
+    
+    .tweet-operations{
+        padding-left:3rem;
+    }
+    .single-tweet-img-container img{
+        width:100%;
+        height:100%;
+    }
+    .user-profile-img-container{
+        width:3rem;
+        height: 3rem;
+        
+    }
+    .user-profile-img-container-sidebar{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        background-image: url("https://img.icons8.com/ios-filled/1x/user-female-circle.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border:2px solid black
+    }
+    .user-profile-img-container-sidebar img{
+        width:100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    
+    .user-profile-img-container-feeds{
+        width:3rem;
+        height: 3rem;
+        margin-left: 0.3rem;
+        margin-top: 0.3rem;
+    }
+    .user-profile-img-container-img-feeds{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        background-image: url("https://img.icons8.com/ios-filled/1x/user-female-circle.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border:2px solid black
+    }
+    .user-profile-img-container-img img{
+        width:100%;
+        border-radius: 50%;
+    }
+    .username-container{
+        margin-left: 0.5rem;
+        margin-top: 0.3rem;
+    }
+    
+    .username-container span{
+        font-weight: bold;
+        text-decoration: underline 3px ;
+        
+    
+    }
+    .date-container{
+      margin-top: 0.3rem;
+      margin-left: 0.3;
+    }
+    .replies-date-container span{
+        font-size: 12px;
+    }
+    .replydelete{
+        font-size: 12px;
+    }
+    
+    .delete-icon-container{
+        margin-left:auto;
+    
+    }
+    .feed-header{
+        background-color: white;
+    
+    }
+    .feed-header h2{
+        font-size: 20px;
+        font-weight: 800;
+    }
+  
+    /* .new-tweet::placeholder{
+        padding-left: 0.5rem;
+        padding-top: 0.5rem;
+    } */
+    .sidebarOption2{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 12rem;
+    }
+    .sidebarOption2 h2{
+        font-weight: 800;
+        font-size: 20px;
+        margin-right:20px;
+       }
+    .retweeted-tweet{
+        padding-left:3rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        font-size: smaller;
+        color: rgb(139, 138, 138);
+        font-weight: 500;
+    }
+    .profile{
+        flex: 0.6;
+        border-right: 1px solid var(--twitter-background);
+        min-width: fit-content;
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        overflow-y: scroll;
+    }
+
+    .profile-details{
+        height:100%;
+        margin-top: 0.5rem;
+        background-image: linear-gradient(
+            to bottom,
+            var(--twitter-color) 20%,
+           white 20% 80%
+          );
+    }
+    .profile-information-img{
+        width: 7rem;
+        height:7rem;
+        align-items: center;
+    }
+    .profile-information-img-img-bg{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        background-image: url("https://img.icons8.com/ios-filled/1x/user-female-circle.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border:2px solid black
+    }
+    .profile-information-img-img-bg img{
+        width:100%;
+        border-radius: 50%;
+        }
+    .profile-follow-andu-nfollow-btn{
+        background: black;
+        width: 6rem;
+    }
+    .profile-followbtn{
+        margin-top: 5.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .profile-name{
+        text-align: center;
+    }
+    .profile-name h2{
+        font-weight: 600;
+        font-size: 25px;
+    }
+    .profile-name span{
+        font-size: medium;
+        color: gray;
+    }
+    .other-details{
+        padding-top: 1rem;
+        padding-left:1rem;
+        font-size: 14px;
+        color: gray;
+    }
+    .location{
+        padding-left: 1rem;
+    }
+    .followersandfollowing{
+        padding-top: 1rem;
+        padding-left:1rem;
+        font-weight: 600;
+    }
+    .followers{
+        padding-left: 0.7rem;
+    }
+    .headingoftweetsprofiloe{
+        padding-top: 1rem;
+        font-weight: 900;
+    }
+    .user-profile-edit{
+        margin-bottom: 4rem;
+        background: rgb(255, 255, 255);
+        width: 4rem;
+        color:grey;
+        border:3px solid grey;
+        font-size: small;
+        font-weight: 500;
+    }
+    .user-profile-delete{
+        margin-bottom: 4rem;
+        
+        background: rgb(255, 255, 255);
+        width: 6rem;
+        color:red;
+        border:3px solid red;
+        font-size: small;
+        font-weight: 500;
+    }
+    .user-profile-photo-upload{
+        margin-bottom: 4rem;
+        
+        background: rgb(255, 255, 255);
+        width: 10rem;
+        color:var(--twitter-color);
+        border:3px solid var(--twitter-color);
+        font-size: small;
+        font-weight: 500;
+        
+    }
+    .gap-icons{
+        padding-right:0.25rem;
+    }
+    .link{
+        text-decoration: none;
+        color: black;
+    }
+    .active{
+        color: var(--twitter-color);
+        background-color: var(--twitter-background);
+        border-radius: 30px;
+    }
+    .comment-box{
+        border: 1px solid dark;
+        
+        width: 87%;
+        margin-left: 3rem;
+    }
+    .comment-line{
+        margin-top: 0;
+        margin-bottom: 0;
+        color: black;
+    }
+    .profile-replies{
+        margin-top: 0.3rem;
+    }
+    .profile-replies-photo{
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.3rem;
+        margin-left:0.2rem;
+     }
+     .profile-replies-photo-bg{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        background-image: url("https://img.icons8.com/ios-filled/1x/user-female-circle.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border:2px solid black
+     }
+     .profile-replies-photo-bg img{
+        width:100%;
+        border-radius: 50%;
+     }
+     .profile-replies-username{
+        font-weight: bold;
+     }
+     .allreplies{
+        margin-left: 3rem;
+        width:22rem;
+     }
+     .allrepliescomments{
+        font-size: 13px;
+     }
+     .fa-bars{
+        display: none;
+     }
+}
+@media screen and (max-width:768px) {
+    
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    
+    }
+    body{
+        --twitter-color:#50b7f5;
+        --twitter-background:#d5d6d7;
+    
+    }
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.7); /* Adjust the background color and opacity */
+        z-index: 9999; /* Adjust the z-index value to make sure the overlay appears above other elements */
+      }
+    .usersearchdetails{
+        justify-content: center;
+        margin-top: 2rem;
+        
+    }
+    .usersearchdetails:hover{
+        background-color: var(--twitter-background);
+        color: var(--twitter-color);
+    }
+    .imgofuser{
+        width: 2rem;
+        height: 2rem;
+    }
+    .imgofuser-img{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        background-image: url("https://img.icons8.com/ios-filled/1x/user-female-circle.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border:2px solid black
+    }
+    .imgofuser-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .nameofuser{
+        margin-left: 4rem;
+        margin-top: 0.2rem;
+    }
+    .usernameoftheuser{
+        margin-left: 4rem;
+        margin-top: 0.2rem;
+    }
+    .sidebarsearchboxdiv{
+        position: relative;
+    }
+    .sidebarsearchBox {
+        width: 26rem;
+        padding-left: 50px;
+        border: none;
+        border-radius: 30px;
+      }
+      .sidebarsearchBox::placeholder{
+        text-indent: 50px;
+        color: black;
+      }
+      .sidebarsearchBox:focus {
+        
+        text-indent: 50px;
+      }
+      .sidebarsearchIcon {
+        position: absolute;
+        top: 18px; /* Adjust as needed for vertical alignment */
+        left: 20px; /* Adjust as needed for horizontal alignment */
+        color: #333; /* Change color as needed */
+      }
+     .name-n-username-container h4{
+          font-size: 18px;
+          width: 8rem;
+          font-weight: bolder;
+    }
+    .fa-trash-can:hover{
+        color: red;
+        cursor: pointer;
+     }
+    
+    .single-feed:hover{
+        background-color: #c0e7ff;
+        cursor: pointer;
+    }
+    .fa-trash-can{
+        font-size: 1.3rem;
+        padding:0.5rem;
+    }
+    
+    
+    .single-feed{
+        transition: 0.3s ease-out;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        border: 1px solid var(--twitter-background);
+    }
+    
+    .upload-image-div{
+        padding-left:1rem;
+        
+    }
+    .upload-image-div i{
+        cursor:pointer; 
+    }
+    
+    .tweet-btn{
+        background: var(--twitter-color);
+        width: 8rem;
+    
+    }
+    .tweet-btn-2{
+        background: var(--twitter-color);
+    }
+    .delete-btn-1{
+        background: red;
+    }
+    .sidebarOption{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .sidebarOption .material-symbols-outlined, .fa-message{
+        padding: 20px;
+    }
+    .sidebarOption h2{
+     font-weight: 800;
+     font-size: 20px;
+     margin-right:20px;
+    }
+    .sidebarOption:hover{
+        background-color: var(--twitter-background);
+        border-radius: 30px;
+        color:var(--twitter-color) ;
+    }
+    .container-lg{
+        display:flex;
+        max-width: 960px;
+        height: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+        
+    }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%; /* Adjust the width as needed */
+        height: 100vh;
+        background-color: white; /* Adjust the background color as needed */
+        border-right: 1px solid var(--twitter-background);
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+        z-index: 10000;
+       
+      }
+      
+      .sidebar.open {
+        transform: translateX(0%);
+       
+      }
+      
+    
+    
+    
+    .last-sidebar-item{
+        margin-top:9rem;
+        
+    }
+    .fa-message{
+        font-size: 30px;
+        color:var(--twitter-color);
+    }
+    .feed{
+        flex: 0.6;
+        border-right: 1px solid var(--twitter-background);
+        min-width: fit-content;
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        overflow-y: scroll;
+    }
+    
+    .single-tweet-text{
+        padding-left:3rem;
+        font-weight: 600;
+        width: 25rem;
+    }
+    
+    .single-tweet-img-container{
+        width:20rem;
+        height:18rem;
+        margin-left:3rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border:2px solid var(--twitter-color);
+    }
+    
+    .tweet-operations{
+        padding-left:3rem;
+    }
+    .single-tweet-img-container img{
+        width:100%;
+        height:100%;
+    }
+    
+    
+    
+    .user-profile-img-container{
+        width:3rem;
+        height: 3rem;
+        
+    }
+    .user-profile-img-container-sidebar{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        background-image: url("https://img.icons8.com/ios-filled/1x/user-female-circle.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border:2px solid black
+    }
+    .user-profile-img-container-sidebar img{
+        width:100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    .user-profile-img-container-feeds{
+        width:3rem;
+        height: 3rem;
+        margin-top: 0.3rem;
+        margin-left: 0.3rem;
+    }
+    .user-profile-img-container-img-feeds{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        background-image: url("https://img.icons8.com/ios-filled/1x/user-female-circle.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border:2px solid black
+    }
+    .user-profile-img-container-img img{
+        width:100%;
+        border-radius: 50%;
+    }
+    .username-container{
+        margin-left: 0.5rem;
+        margin-top:0.3rem
+    }
+    
+    .username-container span{
+        font-weight: bold;
+        text-decoration: underline 3px;
+    }
+    .date-container{
+        margin-top: 0.3rem;
+    }
+    .replies-date-container span{
+        font-size: 12px;
+    }
+    .replydelete{
+        font-size: 12px;
+    }
+    
+    
+    .delete-icon-container{
+        margin-left:auto;
+    
+    }
+    .feed-header{
+        background-color: white;
+        width: 28rem;
+    }
+    .feed-header h2{
+        font-size: 20px;
+        font-weight: 800;
+    }
+    .feed::-webkit-scrollbar{
+        display: none;
+    }
+    /* .new-tweet::placeholder{
+        padding-left: 0.5rem;
+        padding-top: 0.5rem;
+    } */
+    .sidebarOption2{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 12rem;
+    }
+    .sidebarOption2 h2{
+        font-weight: 800;
+        font-size: 20px;
+        margin-right:20px;
+       }
+    .retweeted-tweet{
+        padding-left:3rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        font-size: smaller;
+        color: rgb(139, 138, 138);
+        font-weight: 500;
+    }
+    .profile{
+        flex: 0.6;
+        border-right: 1px solid var(--twitter-background);
+        min-width: fit-content;
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        overflow-y: scroll;
+    }
+    .profile::-webkit-scrollbar{
+        display: none;
+    }
+    .profile-details{
+        height:100%;
+        margin-top: 0.5rem;
+        background-image: linear-gradient(
+            to bottom,
+            var(--twitter-color) 20%,
+           white 20% 80%
+          );
+    }
+    .profile-information-img{
+        width: 7rem;
+        height:7rem;
+        align-items: center;
+    }
+    .profile-information-img-img-bg{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        background-image: url("https://img.icons8.com/ios-filled/1x/user-female-circle.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border:2px solid black
+    }
+    .profile-information-img-img-bg img{
+        width:100%;
+        border-radius: 50%;
+       
+    }
+    .profile-follow-andu-nfollow-btn{
+        background: black;
+        width: 6rem;
+    }
+    .profile-followbtn{
+        margin-top: 5.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .profile-name{
+        text-align: center;
+    }
+    .profile-name h2{
+        font-weight: 600;
+        font-size: 25px;
+    }
+    .profile-name span{
+        font-size: medium;
+        color: gray;
+    }
+    .other-details{
+        padding-top: 1rem;
+        padding-left:1rem;
+        font-size: 14px;
+        color: gray;
+    }
+    .location{
+        padding-left: 1rem;
+    }
+    .followersandfollowing{
+        padding-top: 1rem;
+        padding-left:1rem;
+        font-weight: 600;
+    }
+    .followers{
+        padding-left: 0.7rem;
+    }
+    .headingoftweetsprofiloe{
+        padding-top: 1rem;
+        font-weight: 900;
+    }
+    .user-profile-edit{
+        margin-bottom: 4rem;
+        background: rgb(255, 255, 255);
+        width: 3rem;
+        color:grey;
+        border:3px solid grey;
+        font-size: small;
+        font-weight: 500;
+    }
+    .user-profile-delete{
+        margin-bottom: 4rem;
+        
+        background: rgb(255, 255, 255);
+        width: 5rem;
+        color:red;
+        border:3px solid red;
+        font-size: small;
+        font-weight: 500;
+    }
+    .user-profile-photo-upload{
+        margin-bottom: 4rem;
+        /* margin-left: 7rem; */
+        background: rgb(255, 255, 255);
+        width:9rem;
+        color:var(--twitter-color);
+        border:3px solid var(--twitter-color);
+        font-size: small;
+        font-weight: 500;
+        
+    }
+    .gap-icons{
+        padding-right:0.25rem;
+    }
+    .link{
+        text-decoration: none;
+        color: black;
+    }
+    .active{
+        color: var(--twitter-color);
+        background-color: var(--twitter-background);
+        border-radius: 30px;
+    }
+    .comment-box{
+        border: 1px solid dark;
+        
+        width: 87%;
+        margin-left: 3rem;
+    }
+    .comment-line{
+        margin-top: 0;
+        margin-bottom: 0;
+        color: black;
+    }
+    .profile-replies{
+        margin-top: 0.3rem;
+    }
+    .profile-replies-photo{
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.3rem;
+        margin-left:0.2rem;
+     }
+     .profile-replies-photo-bg{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        background-image: url("https://img.icons8.com/ios-filled/1x/user-female-circle.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border:2px solid black
+     }
+     .profile-replies-photo-bg img{
+        width:100%;
+        border-radius: 50%;
+     }
+     .profile-replies-username{
+        font-weight: bold;
+     }
+     .allreplies{
+        margin-left: 3rem;
+        width:22rem;
+     }
+     .allrepliescomments{
+        font-size: 13px;
+     }
+     .fa-bars{
+        margin-left:  auto;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+     }
+     /* .modal{
+        width: rem;
+     } */
+     .new-tweet{
+        width: 20rem;
+     }
+
+
+}
